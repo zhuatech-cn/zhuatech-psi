@@ -1,0 +1,58 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "REVIEW",
+      "netShortage": "#30",
+      "candidateOrder": "#36",
+      "peakStock": "#71"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "demand": "25"
+    },
+    "expected": {
+      "decision": "PASS",
+      "candidateOrder": "#0"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "storageCapacity": "70"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "storageOverage": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "minimumOrder": "50"
+    },
+    "expected": {
+      "candidateOrder": "#60"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "packSize": "0"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "demand": "54"
+    },
+    "expected": {
+      "candidateOrder": "#24",
+      "packOverage": "#0"
+    },
+    "error": false
+  }
+]
